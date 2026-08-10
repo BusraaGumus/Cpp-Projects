@@ -12,13 +12,30 @@ int main(){
     {
         cout << "Guess A Number Between 1 and 100 : ";
         cin >> playerGuess;
+
         if(playerGuess< 1 || playerGuess>100)
-        { cout << " Invalid answer. Please enter a number between 1 and 100." << endl; continue; }
+        { 
+            cout << " Invalid answer. Please enter a number between 1 and 100." << endl; 
+            continue; 
+        }
+
         else if(playerGuess < numberToGuess)
-        { cout << "Too low! Try again." << endl; continue; }
+        { 
+            cout << "Too low! Try again." << endl; 
+            continue; 
+        }
+
         else if(playerGuess > numberToGuess)
-        { cout<<" Too high! Try again." << endl;   continue; }
+        { 
+            cout<<" Too high! Try again." << endl;   
+            continue; 
+        }
+        
         else
-        { cout << "Congratulations, You Win!" << endl;   cout << "Number: "<< numberToGuess << endl;   break; }
+        { 
+            cout << "Congratulations, You Win!" << endl;   
+            cout << "Number: "<< numberToGuess << endl;   
+            break; 
+        }
     }
 }
