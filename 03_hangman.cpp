@@ -50,7 +50,7 @@ int main(){
         }
         cout<<" \n ";
 
-        cout << "\nGuess Left: " << chances <<endl;
+        cout << "\nGuess Left: " << chances << endl;
         cout << "Used Letters: " << guessedLetters << endl;
         cout << "Guess A Letter: ";
 
@@ -59,7 +59,7 @@ int main(){
 
         if(guessedLetters.find(guess) != string::npos)
         {
-            cout<<" U already tried this, try another letter."<< endl;
+            cout << " U already tried this, try another letter." << endl;
             cout << "Theme: " << currentTheme << endl;
             continue;
         }
@@ -79,7 +79,7 @@ int main(){
 
         if (found)
         { 
-            cout<< "U got one, keep going."<<endl;
+            cout << "U got one, keep going." << endl;
             cout << "Theme: " << currentTheme << endl;
         }
         else{
@@ -89,18 +89,22 @@ int main(){
             chances--;
         }
     }
+
+
     if (guessedWord == WordToGuess && chances >=0)
     {
-    cout << "\nWord:";
+        cout << "\nWord:";
         for( int i= 0; i< guessedWord.length(); i++)
         {
             cout << guessedWord[i] <<  " ";
         }
-        cout<<endl;
+        cout << endl;
         cout << "Congratulations, You Got it! " << endl;
-    }else{
+    }
+    else{
     cout<< "Game Over, U Lost Baby Girl." << endl;
     cout<< "Word: "<< WordToGuess<<endl;
     }
+
     return 0;
 }
